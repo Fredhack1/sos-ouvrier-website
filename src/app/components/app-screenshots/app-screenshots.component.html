@@ -1,0 +1,31 @@
+<section id="app-screenshots" class="relative py-10 hover:overflow-hidden bg-slate-100">
+    <div class="container py-20">
+        <!-- dot 1 -->
+        <div
+            class="hidden w-4 h-4 bg-color-secondary rounded-full opacity-80 absolute right-40 top-52 xl:block animate-scalingUp2">
+        </div>
+        <!-- dot 2 -->
+        <div
+            class="hidden w-2 h-2 bg-color-primary-dark rounded-full opacity-90 absolute left-80 top-52 xl:block animate-movingX">
+        </div>
+        <!-- dot 3 -->
+        <div
+            class="hidden w-4 h-4 bg-color-primary rounded-full opacity-90 absolute right-0 bottom-5 xl:block animate-movingX">
+        </div>
+        <div class="text-center m-auto mb-20 md:w-1/2">
+            <h2 class="font-bold text-color-secondary mb-4">Voir <span class="text-color-primary">SOS Ouvrier</span> en Action</h2>
+            <h1 class="title text-color-primary font-semibold font-jost">Découvrez l'interface intuitive et les fonctionnalités puissantes de notre application mobile.</h1>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-color-primary">
+            <div *ngFor="let screenshot of screenshots" class="screenshot w-[36vh] max-sm:w-[26vh] h-1/4 rounded-3xl shadow-2xl mx-auto">
+                <div class="overflow-hidden p-0 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img [src]="screenshot.src" [alt]="screenshot.alt">
+                </div>
+                <div class="p-0 flex flex-col items-center ">
+                    <h3 class="font-semibold text-color-primary">{{ screenshot.alt }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

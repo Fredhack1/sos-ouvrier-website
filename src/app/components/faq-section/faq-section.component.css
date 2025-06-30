@@ -1,0 +1,20 @@
+/* Animation smooth pour l'ouverture/fermeture */
+.faq-answer {
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Style de base pour les questions */
+.faq-question {
+  transition: color 0.2s ease;
+}
+
+/* Icône flèche */
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Accessibilité - focus */
+/* .faq-question:focus {
+  outline: 2px solid;
+  outline-offset: 2px;
+} */

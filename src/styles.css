@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply tracking-wider;
+}
+
+section {
+  /* @apply py-20 md:py-28; */
+}
+
+h2 {
+  @apply text-2xl md:text-3xl xl:text-4xl font-jost;
+}
+
+#navbar {
+  @apply border-b border-solid border;
+}
+
+/* card */
+.card {
+  @apply py-5 px-5 hover:shadow-2xl hover:-translate-y-1 ease-in duration-300 rounded-2xl hover:bg-color-primary-dark;
+}
+
+/* screenshot */
+.screenshot {
+  @apply hover:shadow-2xl hover:-translate-y-2 ease-in duration-300 rounded-2xl;
+}
+
+/* button */
+.btn {
+  @apply border border-color-secondary bg-color-secondary rounded-md px-5 py-2 ease-linear duration-300;
+}
+
+/* .btn span {
+    @apply font-bold text-color-primary;
+} */
+
+.btn:hover {
+  @apply bg-orange-600;
+}
+
+.btn_outline {
+  @apply bg-transparent text-color-secondary;
+}
+
+.btn_outline:hover {
+  @apply bg-color-secondary text-color-white;
+}
+
+/* blobs */
+
+.blob2 {
+  @apply hidden w-80 h-80 bg-color-secondary absolute -z-10 blur-2xl opacity-30 overflow-hidden rounded-full left-10 top-5 xl:block;
+}

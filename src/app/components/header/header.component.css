@@ -1,0 +1,25 @@
+/* Transition smooth pour le menu mobile */
+#nav-menu {
+  transition: left 0.3s ease-in-out;
+}
+
+/* Empêche le scroll quand le menu est ouvert */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Améliorations pour les liens */
+.nav-link {
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: theme('colors.orange.500');
+  }
+}
+
+/* Adaptation pour les écrans larges */
+@media (min-width: 1024px) {
+  #nav-menu {
+    left: 0 !important; /* Force la position par défaut sur desktop */
+  }
+}

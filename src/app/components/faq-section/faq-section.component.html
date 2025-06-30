@@ -1,0 +1,60 @@
+<section id="faq-section" class="relative py-10 hover:overflow-hidden">
+    <div class="container grid grid-cols-2">
+        <div class="text-center mb-12">
+            <h2 class="font-headline text-3xl text-color-secondary font-bold sm:text-4xl capitalize">
+                Foire aux questions
+            </h2>
+            <p class="mt-4 text-lg max-w-2xl font-jost text-color-primary mx-auto">
+                Trouvez des réponses aux questions courantes sur SOS Ouvrier et comment utiliser notre application.
+            </p>
+            <div class="faq-container space-y-4 p-12">
+                @for (faq of faqs; track $index) {
+                <div class="faq-item rounded-lg shadow-md px-4 text-color-secondary">
+                    <button (click)="toggleFaq($index)"
+                        class="faq-question w-full flex justify-between items-center text-left py-4 font-jost hover:text-primary transition-colors"
+                        [attr.aria-expanded]="faq.isOpen">
+                        <span class="text-lg">{{ faq.question }}</span>
+                        <span class="transform transition-transform duration-200" [class.rotate-180]="faq.isOpen">
+                            <i class="ri-arrow-down-s-line text-2xl"></i>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg> -->
+                        </span>
+                    </button>
+
+                    <div class="faq-answer overflow-hidden transition-all duration-300 ease-in-out"
+                        [class.max-h-0]="!faq.isOpen" [class.max-h-[500px]]="faq.isOpen"
+                        [attr.aria-hidden]="!faq.isOpen">
+                        <p class="pt-2 pb-4 text-color-primary">{{ faq.answer }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        <div class="flex flex-col items-center mb-12 bg-color-secondary rounded-e-3xl text-color-white p-6">
+            <!-- dot 1 -->
+            <div
+                class="hidden w-4 h-4 bg-color-primary-dark rounded-full opacity-80 absolute right-40 top-52 xl:block animate-scalingUp2">
+            </div>
+            <!-- dot 2 -->
+            <div
+                class="hidden w-2 h-2 bg-color-primary-dark rounded-full opacity-90 absolute left-80 top-52 xl:block animate-movingX">
+            </div>
+            <!-- dot 3 -->
+            <div
+                class="hidden w-4 h-4 bg-color-primary rounded-full opacity-90 absolute right-0 bottom-5 xl:block animate-movingX">
+            </div>
+            <h2 class="font-headline text-3xl font-bold sm:text-4xl">
+                Téléchargez l'application
+            </h2>
+            <div class="overflow-hidden w-[36vh] max-sm:w-[26vh] mt-5 p-0 duration-300 animate-movingY">
+                <img src="assets/img/login-screen.png" alt="login_screen">
+            </div>
+            <p class="mt-4 text-lg max-w-2xl mx-auto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+    </div>
+</section>
