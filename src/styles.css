@@ -59,8 +59,8 @@ h2 {
 
 /* bubbles */
 .bubble1 {
-  @apply max-sm:left-8 max-sm:top-6;
+  @apply max-sm:left-8 max-sm:top-6 max-sm:text-color-white;
 }
 .bubble2 {
-  @apply max-sm:right-8 max-sm:bottom-6;
+  @apply max-sm:right-8 max-sm:bottom-6 max-sm:text-color-secondary;
 }
