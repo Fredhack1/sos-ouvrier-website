@@ -1,26 +1,21 @@
 <section id="faq-section" class="relative py-10 hover:overflow-hidden">
-    <div class="container grid grid-cols-2">
-        <div class="text-center mb-12">
+    <div class="container grid grid-cols-2 max-sm:grid-cols-1 items-center">
+        <div class="text-center mb-12 max-sm:mb-0 max-sm:text-center">
             <h2 class="font-headline text-3xl text-color-secondary font-bold sm:text-4xl capitalize">
                 Foire aux questions
             </h2>
             <p class="mt-4 text-lg max-w-2xl font-jost text-color-primary mx-auto">
                 Trouvez des réponses aux questions courantes sur SOS Ouvrier et comment utiliser notre application.
             </p>
-            <div class="faq-container space-y-4 p-12">
+            <div class="faq-container space-y-4 p-12 max-sm:p-6 max-sm:space-y-3">
                 @for (faq of faqs; track $index) {
                 <div class="faq-item rounded-lg shadow-md px-4 text-color-secondary">
                     <button (click)="toggleFaq($index)"
                         class="faq-question w-full flex justify-between items-center text-left py-4 font-jost hover:text-primary transition-colors"
                         [attr.aria-expanded]="faq.isOpen">
-                        <span class="text-lg">{{ faq.question }}</span>
+                        <span class="text-lg max-sm:text-base">{{ faq.question }}</span>
                         <span class="transform transition-transform duration-200" [class.rotate-180]="faq.isOpen">
                             <i class="ri-arrow-down-s-line text-2xl"></i>
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg> -->
                         </span>
                     </button>
 
@@ -33,7 +28,7 @@
                 }
             </div>
         </div>
-        <div class="flex flex-col items-center mb-12 bg-color-secondary rounded-e-3xl text-color-white p-6">
+        <div class="flex flex-col items-center mb-12 bg-color-secondary rounded-e-3xl text-color-white p-6 max-sm:hidden">
             <!-- dot 1 -->
             <div
                 class="hidden w-4 h-4 bg-color-primary-dark rounded-full opacity-80 absolute right-40 top-52 xl:block animate-scalingUp2">
@@ -52,8 +47,8 @@
             <div class="overflow-hidden w-[36vh] max-sm:w-[26vh] mt-5 p-0 duration-300 animate-movingY">
                 <img src="assets/img/login-screen.png" alt="login_screen">
             </div>
-            <p class="mt-4 text-lg max-w-2xl mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <p class="font-headline mt-4 text-md max-w-2xl mx-auto">
+                Téléchargez l'application dès maintenant et profitez de toutes ses fonctionnalités.
             </p>
         </div>
     </div>

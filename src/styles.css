@@ -56,3 +56,11 @@ h2 {
 .blob2 {
   @apply hidden w-80 h-80 bg-color-secondary absolute -z-10 blur-2xl opacity-30 overflow-hidden rounded-full left-10 top-5 xl:block;
 }
+
+/* bubbles */
+.bubble1 {
+  @apply max-sm:left-8 max-sm:top-6;
+}
+.bubble2 {
+  @apply max-sm:right-8 max-sm:bottom-6;
+}
