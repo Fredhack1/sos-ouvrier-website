@@ -8,6 +8,8 @@ import { HowItWorksComponent } from './components/how-it-works/how-it-works.comp
 import { TestimoialsComponent } from './components/testimoials/testimoials.component';
 import { FaqSectionComponent } from './components/faq-section/faq-section.component';
 import { DownloadAppComponent } from './components/download-app/download-app.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +24,8 @@ import { DownloadAppComponent } from './components/download-app/download-app.com
     TestimoialsComponent,
     FaqSectionComponent,
     DownloadAppComponent,
+    ContactComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

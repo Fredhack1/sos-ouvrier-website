@@ -1,0 +1,55 @@
+<section id="contact" class="relative py-14 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-left md:w-2/3 m-auto">
+                <i class="ri-mail-send-line hidden font-thin text-8xl text-color-secondary opacity-30 absolute left-10 top-60 md:block animate-movingY"></i>
+                <i class="ri-customer-service-line hidden font-thin text-6xl text-color-secondary opacity-30 absolute right-10 top-10 md:block animate-movingX"></i>
+                <h1 class="font-headline text-3xl text-color-secondary font-bold sm:text-4xl capitalize">
+                    Contactez-nous
+                </h1>
+                <p class="leading-relaxed font-jost pt-5 text-color-primary">
+                    Si vous avez des questions, des suggestions ou si vous souhaitez en savoir plus sur notre
+                    application, n'hésitez pas à nous contacter. Nous sommes là pour vous aider et nous apprécions vos
+                    retours.
+                </p>
+                <div class="max-sm:mt-0 mt-8 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <i class="ri-mail-line text-lg text-color-secondary"></i>
+                        <a href="mailto:contact@sos-ouvrier.com"
+                            class="text-color-secondary">contact&#64;sos-ouvrier.com</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact form side -->
+            <div class="flex flex-col justify-center items-center max-sm:-mt-7 p-5 rounded-lg shadow-lg">
+                <!-- <h2 class="font-headline font-jost text-2xl text-color-primary font-bold mb-5">Formulaire de contact</h2> -->
+                <form class="w-full space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-color-primary-dark">Nom</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-color-secondary">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-color-primary-dark">Email</label>
+                        <input type="email" id="email" name="email" placeholder="ton-adresse@email.com" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-color-secondary">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-color-primary-dark">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Votre avis ou question..." required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-color-secondary"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-color-secondary text-white py-2 px-4 rounded-md hover:bg-opacity-80 transition duration-200">
+                        Envoyer
+                        <i class="ri-send-plane-fill"></i>
+                    </button>
+                </form>
+                <!-- dot 1 -->
+                <div
+                    class="hidden w-4 h-4 bg-color-primary-dark rounded-full opacity-90 absolute right-96 bottom-10 md:block animate-scalingUp">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
