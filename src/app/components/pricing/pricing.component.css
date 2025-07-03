@@ -1,0 +1,9 @@
+/* pricing.component.css */
+.card {
+  perspective: 1000px;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
