@@ -20,10 +20,13 @@ export class HeaderComponent {
   case = 'assets/img/case.png';
 
   navItems: NavItem[] = [
-    { link: '#home', label: 'Home' },
-    { link: '#about', label: 'About' },
-    { link: '#popular', label: 'Popular' },
-    { link: '#review', label: 'Review' }
+    { link: '#home', label: 'Accueil' },
+    { link: '#about', label: 'À Propos' },
+    // { link: '#features', label: 'Fonctionnalités' },
+    { link: '#pricing', label: 'Tarifications' },
+    { link: '#testimonials', label: 'Témoignages' },
+    { link: '#faq-section', label: 'FAQ' },
+    { link: '#contact', label: 'Contact' }
   ];
 
   toggleMenu(): void {

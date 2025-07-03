@@ -1,7 +1,7 @@
 <header id="navbar" class="sticky w-full top-0 left-0 z-50 bg-color-white backdrop-blur-sm">
     <nav class="container mx-auto flex items-center justify-between h-16 sm:h-20">
         <!-- Logo -->
-        <div class="font-lobster sm:text-2xl">
+        <div class="font-lobster sm:text-2xl cursor-pointer">
             <a routerLink="/">
                 <img [src]="logoPath" alt="logo" class="w-32 h-16">
             </a>
@@ -14,7 +14,7 @@
              class="absolute top-0 min-h-[80vh] w-full bg-color-secondary backdrop-blur-xl flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto">
             
             <ul class="flex flex-col items-center gap-8 lg:flex-row">
-                <li *ngFor="let item of navItems">
+                <li *ngFor="let item of navItems" class="border-b border-color-primary lg:border-0 lg:mb-0 mb-4 hover:border-color-white duration-300 ease-linear">
                     <a [href]="item.link" class="nav-link font-semibold text-color-primary" (click)="handleNavClick($event, item.link)">
                         {{ item.label }}
                     </a>
@@ -33,7 +33,7 @@
         <!-- Bouton Téléchargement -->
         <div>
             <button class="btn btn_outline text-color-secondary hover:text-color-white" (click)="downloadApp()">
-                <span class="font-bold">Download App </span>
+                <span class="font-bold">Télécharger </span>
                 <i class="ri-download-line"></i>
             </button>
         </div>
