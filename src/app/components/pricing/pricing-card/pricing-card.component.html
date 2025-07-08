@@ -1,0 +1,49 @@
+<div
+    class="card group relative w-full overflow-hidden rounded-2xl bg-color-primary transition duration-300 hover:shadow-xl">
+    <div class="card-inner relative w-full h-full rounded-2xl border-2 border-color-white/50 transition-transform duration-700 [transform-style:preserve-3d]"
+        [class.rotate-y-180]="isYearly">
+        <!-- Face avant : mensuelle -->
+        <div class="card-face front w-full h-full backface-hidden">
+            <div class="p-7 h-full flex flex-col justify-between">
+                <div>
+                    <p
+                        class="text-5xl font-bold relative pl-2 before:content-['XAF'] before:absolute before:text-sm before:top-0 before:-left-5">
+                        {{ monthlyPrice }}<span class="text-sm font-normal tracking-widest">/par mois</span>
+                    </p>
+                    <h3 class="text-xl font-bold py-4">{{ title }}</h3>
+                    <p>{{ description }}</p>
+                </div>
+                <ul class="space-y-4 py-6">
+                    <li *ngFor="let f of features">
+                        <i class="ri-bookmark-fill"
+                            [ngClass]="f.available ? 'text-color-secondary' : 'text-color-gray'"></i>
+                        <span class="pl-4">{{ f.label }}</span>
+                    </li>
+                </ul>
+                <button class="card_btn mt-auto">Get Started</button>
+            </div>
+        </div>
+
+        <!-- Face arrière : annuelle -->
+        <div class="card-face back w-full h-full backface-hidden rotate-y-180 absolute top-0 left-0">
+            <div class="p-7 h-full flex flex-col justify-between">
+                <div>
+                    <p
+                        class="text-5xl font-bold pl-2 relative before:content-['XAF'] before:absolute before:text-sm before:top-0 before:-left-5">
+                        {{ yearlyPrice }}<span class="text-sm font-normal tracking-widest">/par an</span>
+                    </p>
+                    <h3 class="text-xl font-bold py-4">{{ title }}</h3>
+                    <p>{{ description }}</p>
+                </div>
+                <ul class="space-y-4 py-6">
+                    <li *ngFor="let f of features">
+                        <i class="ri-bookmark-fill"
+                            [ngClass]="f.available ? 'text-color-secondary' : 'text-color-gray'"></i>
+                        <span class="pl-4">{{ f.label }}</span>
+                    </li>
+                </ul>
+                <button class="card_btn mt-auto">Get Started</button>
+            </div>
+        </div>
+    </div>
+</div>
