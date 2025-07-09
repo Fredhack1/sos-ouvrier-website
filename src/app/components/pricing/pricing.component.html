@@ -1,4 +1,4 @@
-<section class="bg-color-primary text-color-white">
+<section id="pricing" class="bg-color-primary text-color-white">
     <div class="container py-10 font-jost">
         <!-- Switch Toggle -->
         <div class="text-center mb-10">
@@ -22,7 +22,7 @@
         <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-[repeat(3,minmax(1fr))]">
             <app-pricing-card *ngFor="let plan of plans" class="h-[580px] md:h-[600px]"
                 [monthlyPrice]="plan.monthlyPrice" [yearlyPrice]="plan.yearlyPrice" [title]="plan.title"
-                [description]="plan.description" [features]="plan.features" [isYearly]="isYearly"></app-pricing-card>
+                [description]="plan.description" [yearlyDescription]="plan.yearlyDescription" [isYearly]="isYearly"></app-pricing-card>
         </div>
     </div>
 </section>

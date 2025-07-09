@@ -15,5 +15,6 @@ export class PricingCardComponent {
   @Input() yearlyPrice!: number;
   @Input() title!: string;
   @Input() description!: string;
+  @Input() yearlyDescription!: string;
   @Input() features!: { label: string, available: boolean }[];
 }
