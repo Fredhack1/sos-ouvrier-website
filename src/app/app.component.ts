@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -17,6 +18,7 @@ import { PricingComponent } from './components/pricing/pricing.component';
   standalone: true,
   imports: [
     RouterOutlet,
+    CommonModule,
     HeaderComponent,
     HomeComponent,
     FeaturesComponent,
@@ -33,5 +35,19 @@ import { PricingComponent } from './components/pricing/pricing.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'sos-ouvrier';
+  scrollTopVisible = false;
+  scrollProgress = 0;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    this.scrollProgress = (scrollTop / docHeight) * 100;
+    this.scrollTopVisible = scrollTop > 100; // Afficher le bouton "scroll to top" après 100px de défilement
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

@@ -10,4 +10,23 @@
     <app-download-app></app-download-app>
     <app-contact></app-contact>
     <app-footer></app-footer>
+    <!-- Scroll-to-Top avec progress intégré -->
+    <button *ngIf="scrollTopVisible" (click)="scrollToTop()"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-color-secondary text-white shadow-xl flex items-center justify-center group hover:bg-opacity-90 transition duration-300"
+        aria-label="Scroll to top">
+        <!-- Progress cercle SVG -->
+        <svg class="absolute w-full h-full rotate-[-90deg]" viewBox="0 0 36 36">
+            <path class="text-color-primary" stroke-width="3" fill="none" stroke="currentColor" d="M18 2.0845
+         a 15.9155 15.9155 0 0 1 0 31.831
+         a 15.9155 15.9155 0 0 1 0 -31.831" />
+            <path class="text-white" stroke-width="3" fill="none" [attr.stroke-dasharray]="scrollProgress + ', 100'"
+                stroke="currentColor" d="M18 2.0845
+         a 15.9155 15.9155 0 0 1 0 31.831
+         a 15.9155 15.9155 0 0 1 0 -31.831" />
+        </svg>
+
+        <!-- Icône centre -->
+        <i class="ri-arrow-up-line text-xl relative z-10"></i>
+    </button>
+
 </main>
