@@ -16,9 +16,9 @@ h2 {
   @apply text-2xl md:text-3xl xl:text-4xl font-jost;
 }
 
-#navbar {
+/* #navbar {
   @apply border-b border-solid border;
-}
+} */
 
 /* card */
 .card {

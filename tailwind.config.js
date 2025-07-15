@@ -21,8 +21,11 @@ module.exports = {
         },
       },
       keyframes: {
-        move: {
+        moveY: {
           "50%": { transform: "translateY(-1rem)" },
+        },
+        moveY2: {
+          "50%": { transform: "translateY(-10rem)" },
         },
         moveX: {
           "50%": { transform: "translateX(-10rem)" },
@@ -48,7 +51,8 @@ module.exports = {
         }
       },
       animation: {
-        movingY: "move 3s linear infinite",
+        movingY: "moveY 3s linear infinite",
+        movingY2: "moveY2 8s linear infinite",
         movingX: "moveX 15s linear infinite",
         rotating: "rotate 15s linear infinite",
         rotatingY: "rotateY 15s linear infinite",

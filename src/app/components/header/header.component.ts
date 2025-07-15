@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface NavItem {
@@ -15,9 +15,12 @@ interface NavItem {
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  isScrolled = false;
   logoPath = 'assets/img/logo-png.png';
   job = 'assets/img/job.png';
   case = 'assets/img/case.png';
+
+  constructor(private el: ElementRef) {}
 
   navItems: NavItem[] = [
     { link: '#home', label: 'Accueil' },
@@ -25,7 +28,7 @@ export class HeaderComponent {
     // { link: '#features', label: 'Fonctionnalités' },
     { link: '#pricing', label: 'Tarifications' },
     { link: '#testimonials', label: 'Témoignages' },
-    { link: '#faq-section', label: 'FAQ' },
+    { link: '#faq', label: 'FAQ' },
     { link: '#contact', label: 'Contact' }
   ];
 
@@ -54,6 +57,12 @@ export class HeaderComponent {
     if (window.innerWidth >= 1024) {
       this.isMenuOpen = false;
     }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    this.isScrolled = scrollY > 50;
   }
 
 }

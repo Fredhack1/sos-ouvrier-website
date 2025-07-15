@@ -22,11 +22,11 @@ export class AppScreenshotsComponent {
   statScreenPath = 'assets/img/stat-screen.png';
 
   screenshots: ScreenshotItem[] = [
-    { src: this.postScreenPath, alt: 'Post Screen' },
+    { src: this.postScreenPath, alt: 'Annonces' },
     // { src: this.loginScreenPath, alt: 'Login Screen' },
-    { src: this.homeScreenPath, alt: 'Home Screen' },
-    { src: this.statScreenPath, alt: 'Stat Screen' },
-    { src: this.drawerScreenPath, alt: 'Drawer Screen' },
+    { src: this.homeScreenPath, alt: 'Ecran d\'Accueil' },
+    { src: this.statScreenPath, alt: 'Statistiques' },
+    { src: this.drawerScreenPath, alt: 'Menu contextuel' },
     // { src: this.planScreenPath, alt: 'Plan Screen' },
   ];
 }
