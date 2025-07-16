@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -12,6 +13,7 @@ import { DownloadAppComponent } from './components/download-app/download-app.com
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PricingComponent } from './components/pricing/pricing.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +21,8 @@ import { PricingComponent } from './components/pricing/pricing.component';
   imports: [
     RouterOutlet,
     CommonModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     HeaderComponent,
     HomeComponent,
     FeaturesComponent,

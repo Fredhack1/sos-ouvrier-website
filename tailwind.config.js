@@ -48,7 +48,11 @@ module.exports = {
           "0%": { transform: "scale(0.4)" },
           "50%": { transform: "scale(1.8)" },
           "100%": { transform: "scale(0.4)" },
-        }
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
         movingY: "moveY 3s linear infinite",
@@ -58,6 +62,7 @@ module.exports = {
         rotatingY: "rotateY 15s linear infinite",
         scalingUp: "scaleUp 3s ease-in-out infinite",
         scalingUp2: "scaleUp2 3s ease-in-out infinite",
+        fadeIn: "fadeIn 0.4s ease-in-out",
       },
       fontFamily: {
         jost: ["Jost", "sans-serif"],
