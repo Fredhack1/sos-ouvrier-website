@@ -3,7 +3,7 @@
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="text-left md:w-2/3 m-auto">
                 <i
-                    class="ri-mail-send-line hidden font-thin text-8xl text-color-secondary opacity-30 absolute left-10 top-60 md:block animate-movingY"></i>
+                    class="ri-mail-send-line hidden font-thin text-8xl text-color-primary opacity-30 absolute left-10 top-60 md:block animate-movingY"></i>
                 <i
                     class="ri-customer-service-line hidden font-thin text-6xl text-color-secondary opacity-30 absolute right-10 top-10 md:block animate-movingX"></i>
                 <h1 class="font-headline text-3xl text-color-secondary font-bold sm:text-4xl capitalize">
@@ -32,7 +32,7 @@
                         <input id="name" type="text" formControlName="name" placeholder="John Doe" [ngClass]="{
                             'border-red-500': submitted && f['name'].invalid,
                             'border-gray-300': !f['name'].invalid}"
-                            class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-color-secondary">
+                            class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-color-primary">
                         <div *ngIf="submitted && f['name'].invalid" class="text-sm text-red-500 mt-1">Veuillez saisir un
                             nom valide.</div>
                     </div>
@@ -44,7 +44,7 @@
                             [ngClass]="{
                             'border-red-500': submitted && f['email'].invalid,
                             'border-gray-300': !f['email'].invalid}"
-                            class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-color-secondary">
+                            class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-color-primary">
                         <div *ngIf="submitted && f['email'].invalid" class="text-sm text-red-500 mt-1">Veuillez entrer
                             une adresse email valide.</div>
                     </div>
@@ -56,7 +56,7 @@
                             placeholder="Votre avis ou question..." [ngClass]="{
                             'border-red-500': submitted && f['message'].invalid,
                             'border-gray-300': !f['message'].invalid}"
-                            class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-color-secondary"></textarea>
+                            class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-color-primary"></textarea>
                         <div *ngIf="submitted && f['message'].invalid" class="text-sm text-red-500 mt-1">Votre message
                             est trop court.</div>
                     </div>
