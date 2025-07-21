@@ -14,6 +14,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PreloaderComponent } from './components/preloader/preloader.component';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     HttpClientModule,
     ReactiveFormsModule,
+    PreloaderComponent,
     HeaderComponent,
     HomeComponent,
     FeaturesComponent,
@@ -41,6 +43,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class AppComponent {
   scrollTopVisible = false;
   scrollProgress = 0;
+  loading = true;
+
+  ngOnInit() {
+    // Simuler un délai pour le chargement
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

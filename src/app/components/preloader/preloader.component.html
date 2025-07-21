@@ -1,0 +1,11 @@
+<div class="fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center transition-opacity duration-700"
+     [class.opacity-0]="!show"
+     [class.pointer-events-none]="!show">
+  <!-- Logo -->
+  <img [src]="logoPath" alt="Logo" class="h-12 mb-6 animate-pulse" />
+
+  <!-- Barre de progression -->
+  <div class="w-40 h-2 bg-gray-200 rounded-full overflow-hidden">
+    <div class="h-full bg-color-secondary animate-progress"></div>
+  </div>
+</div>

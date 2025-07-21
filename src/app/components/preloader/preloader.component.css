@@ -1,0 +1,16 @@
+/* .loader {
+  border-top-color: #3b82f6;
+} */
+
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-progress {
+  animation: progress 1.8s ease-in-out forwards;
+}

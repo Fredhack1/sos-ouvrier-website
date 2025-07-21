@@ -53,6 +53,10 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        pulse: {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0.5 },
+        }
       },
       animation: {
         movingY: "moveY 3s linear infinite",
@@ -63,6 +67,7 @@ module.exports = {
         scalingUp: "scaleUp 3s ease-in-out infinite",
         scalingUp2: "scaleUp2 3s ease-in-out infinite",
         fadeIn: "fadeIn 0.4s ease-in-out",
+        pulse: 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       fontFamily: {
         jost: ["Jost", "sans-serif"],
